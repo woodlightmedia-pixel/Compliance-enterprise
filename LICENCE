@@ -1,0 +1,28 @@
+PROPRIETARY AND CONFIDENTIAL SOURCE CODE LICENSE
+
+Copyright (c) 2026 Woodlight Media. All rights reserved.
+
+WARNING: ALL RIGHTS RESERVED. This software and related documentation (the "Software") 
+are the intellectual property of Woodlight Media. The Software is protected by copyright 
+laws and international treaty provisions.
+
+1. RESTRICTIONS ON USE:
+   - You are strictly prohibited from copying, distributing, modifying, reverse engineering, 
+     selling, leasing, or sublicensing this Software to any third party.
+   - No rights are granted to expose this Software as a public service or integrated agentic 
+     node on third-party networks without explicit, written prior authorization from Woodlight Media.
+
+2. ACCESS AND PERMISSIONS:
+   - Access to this source code does not imply or grant permission for use, publication, 
+     or inclusion in open-source registries or open Agent2Agent (A2A) discovery directories.
+   - Any deployment of this system to staging or production environments (including cloud platforms 
+     such as AWS or TrueFoundry) must be explicitly bound to internal-use credentials owned directly 
+     by Woodlight Media.
+
+3. NO WARRANTY:
+   THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, 
+   INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A 
+   PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE IS WITH YOU.
+
+UNAUTHORIZED COPYING, USE, OR DISTRIBUTION CONSTITUTES COPYRIGHT INFRINGEMENT AND MAY RESULT 
+IN CIVIL AND CRIMINAL PENALTIES.

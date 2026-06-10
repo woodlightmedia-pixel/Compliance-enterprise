@@ -1,0 +1,19 @@
+# Ignore Git history
+.git
+.github
+
+# Ignore python cache and virtual environments
+__pycache__
+*.pyc
+.venv
+venv
+env
+
+# Ignore local environment variables & documentation
+.env
+.env.local
+README.md
+
+# Ignore local UI or temporary data files
+*.log
+.DS_Store

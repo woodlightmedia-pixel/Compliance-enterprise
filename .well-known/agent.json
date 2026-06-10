@@ -1,0 +1,17 @@
+{
+  "name": "SequentialEnterpriseAgent",
+  "description": "Performs sequential multi-agent research and reporting workflows.",
+  "version": "2.0.0",
+  "endpoint_url": "https://your-truefoundry-aws-url.com/api/v1",
+  "modes": ["message/send", "message/stream"],
+  "skills": [
+    {
+      "name": "ResearchAndWrite",
+      "description": "Takes a broad topic, extracts core facts, and builds a synthesized report."
+    }
+  ],
+  "authentication": {
+    "type": "bearer",
+    "description": "TrueFoundry Agent Gateway Auth"
+  }
+}

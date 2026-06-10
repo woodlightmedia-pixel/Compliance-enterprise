@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments & Virtual Envs
+.venv/
+venv/
+ENV/
+env/
+.env
+.env.local
+
+# TrueFoundry & Infrastructure state
+.truefoundry/secrets/
+*.pem
+*.tfstate
+
+# IDEs and OS junk
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Project local artifacts / Agent logs
+*.log
+src/ui/.streamlit/config.toml.env
+.venv/
+__pycache__/
+.DS_Store
