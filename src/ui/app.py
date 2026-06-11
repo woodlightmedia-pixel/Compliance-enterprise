@@ -48,7 +48,9 @@ with col1:
             
             with st.spinner("Anonymizing PII and running compliance models..."):
                 try:
-                    response = requests.post("http://127.0.0.1:8000/api/v1/message/send", json=payload)
+                    response = requests.post(
+    "https://compliance-backend-1057062787453.europe-west2.run.app/api/v1/message/send", 
+    json=payload)
                     
                     if response.status_code == 200:
                         output_data = response.json()
@@ -82,7 +84,7 @@ with col1:
                         st.error(f"Platform Error: Guardrail barrier triggered. (Status {response.status_code})")
                         
                 except requests.exceptions.ConnectionError:
-                    st.error("Connection Refused: Ensure your FastAPI backend server is running on port 8000!")
+                    st.error("Connection Refused: The live Enterprise Cloud Run backend instance is temporarily unreachable.")
 
 with col2:
     st.subheader("📊 System Telemetry")

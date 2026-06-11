@@ -3,11 +3,11 @@
 .github
 
 # Ignore python cache and virtual environments
-__pycache__
+**/__pycache__/
 *.pyc
-.venv
-venv
-env
+.venv/
+venv/
+env/
 
 # Ignore local environment variables & documentation
 .env

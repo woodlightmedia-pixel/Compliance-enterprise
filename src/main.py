@@ -4,10 +4,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 
 # 🛠️ FIXED: Go inside the specific router file to pull out the direct APIRouter instance variable
-from src.protocols.router import router
+from src.protocols.router import router 
 
-# Load local environment flags
-load_dotenv()
+# override=False ensures that real cloud secrets take strict priority over file placeholders
+load_dotenv(override=False)
 
 # Initialize the primary API server engine
 app = FastAPI(

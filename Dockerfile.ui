@@ -1,19 +1,17 @@
 # =====================================================================
-# ENTERPRISE BACKEND: FastAPI & Multi-Agent Pipeline
+# ENTERPRISE FRONTEND: Streamlit User Dashboard
 # =====================================================================
 FROM python:3.11-slim AS base
 
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
-# 🔥 THE FIX: Explicitly map the app workspace to the Python system path
-ENV PYTHONPATH=/app
+ENV HOME=/app
 
 WORKDIR /app
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
-    curl \
     && rm -rf /var/lib/apt/lists/*
 
 # Layer caching for Python dependencies
@@ -21,9 +19,8 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir -r requirements.txt
 
-# Copy application code
-COPY src/ ./src/
-COPY knowledge_base/ ./knowledge_base/
+# Copy only the UI code
+COPY src/ui/ ./src/ui/
 
 # Enforce Non-Root Security
 RUN useradd -u 8888 appuser && chown -R appuser:appuser /app
@@ -33,5 +30,4 @@ USER appuser
 ENV PORT=8080
 EXPOSE 8080
 
-# Launch Uvicorn using the dynamic $PORT variable
-CMD ["sh", "-c", "uvicorn src.main:app --host 0.0.0.0 --port ${PORT}"]
+CMD streamlit run src/ui/app.py --server.port=${PORT:-8080}
